@@ -1,0 +1,48 @@
+.container
+{
+    max-width: 480px;
+    width: 100%;
+}
+.logo
+{
+    border-radius: 20px;
+}
+.ss
+{
+    margin-left: 2px;
+    float: left;
+}
+.name
+{
+    border: white;
+}
+.jarak
+{
+    width: 1500px;
+}
+table th,td{
+font-size: 14px;
+}
+#num 
+{
+    padding-top: 32px;
+    text-align: center;
+}
+
+#dis 
+{
+    background-color: black;
+}
+.jumlah 
+{
+    text-align: center;
+}
+#date
+{
+    font-size: 10px;
+}
+
+.foto
+{
+    float: right;
+}

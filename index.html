@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skoring U.A.C</title>
+    <link rel="shortcut icon" href="issets/img/logo2.jpg">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="issets/css/main.css">
+    <script>
+          function printContent(el){
+        var restorepage = document.body.innerHTML;
+        var printcontent = document.getElementById(el).innerHTML;
+        document.body.innerHTML = printcontent;
+        window.print();
+        document.body.innerHTML = restorepage;
+    }
+    </script>
+  </head>
+<body id="body">
+  <!-- Image and text -->
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="issets/img/logo.jpg" width="30" height="30" class="logo d-inline-block align-top">
+      UNIDA Archery Club
+    </a>
+  </nav>
+  <div class="container">
+    <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+      <strong>Perhatian :</strong> Lebih nyaman jika discreenshot Manual terima kasih
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>NAMA</th>
+            <td colspan="4"><input type="text" class="name" autofocus autocomplete="off"></td>
+            <th >Jarak</th>
+            <td>
+              <select name="" id="jarak">
+                <option selected>Jarak</option>
+                <option value="">10</option>
+                <option value="">15</option>
+                <option value="">20</option>
+                <option value="">25</option>
+                <option value="">30</option>
+                <option value="">35</option>
+                <option value="">40</option>
+                <option value="">45</option>
+                <option value="">50</option>
+                <option value="">55</option>
+                <option value="">60</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Tanggal</th>
+            <td id="date" colspan="3"><button type="button" class="btn btn-success" onclick="mydate()">Get Date</button></td>
+            <td>Total</td>
+            <td colspan="2">Total /Rambahan</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="num" rowspan="2">1</th>
+            <td>
+              <select name="" id="bil1">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil2">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil3">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td id="hasil1"></td>
+            <td id="dis"></td>
+            <td id="dis"></td>
+          </tr>
+          <tr>
+            <td>
+              <select name="" id="bil4">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil5">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil6">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td id="hasil2"></td>
+            <td id="hasil3"></td>
+            <td id="dis"></td>
+          </tr>
+
+          <tr>
+            <th id="num" rowspan="2">2</th>
+            <td>
+              <select name="" id="bil7">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil8">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil9">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td id="hasil4"></td>
+            <td id="dis"></td>
+            <td id="hasil5"></td>
+          </tr>
+          <tr>
+            <td>
+              <select name="" id="bil10">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil11">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil12">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td id="hasil6"></td>
+            <td id="hasil7"></td>
+            <td id="dis"></td>
+          </tr>
+
+
+
+
+<!-- Pembatas -->
+
+
+
+
+          <tr>
+            <th id="num" rowspan="2">3</th>
+            <td>
+              <select name="" id="bil13">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil14">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil15">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td id="hasil8"></td>
+            <td id="dis"></td>
+            <td id="dis"></td>
+          </tr>
+          <tr>
+            <td>
+              <select name="" id="bil16">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil17">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil18">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td id="hasil9"></td>
+            <td id="hasil10"></td>
+            <td id="dis"></td>
+          </tr>
+
+          <tr>
+            <th id="num" rowspan="2">4</th>
+            <td>
+              <select name="" id="bil19">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil20">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil21">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td id="hasil11"></td>
+            <td id="dis"></td>
+            <td id="hasil12"></td>
+          </tr>
+          <tr>
+            <td>
+              <select name="" id="bil22">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil23">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td>
+              <select name="" id="bil24">
+                <option value="0">-</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <option value="8">8</option>
+                <option value="7">7</option>
+                <option value="6">6</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </td>
+            <td id="hasil13"></td>
+            <td id="hasil14"></td>
+            <td id="dis"></td>
+          </tr>
+
+
+
+
+    <!-- Pembatas -->
+
+
+
+    <tr>
+      <th id="num" rowspan="2">5</th>
+      <td>
+        <select name="" id="bil25">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td>
+        <select name="" id="bil26">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td>
+        <select name="" id="bil27">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td id="hasil15"></td>
+      <td id="dis"></td>
+      <td id="dis"></td>
+    </tr>
+    <tr>
+      <td>
+        <select name="" id="bil28">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td>
+        <select name="" id="bil29">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td>
+        <select name="" id="bil30">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td id="hasil16"></td>
+      <td id="hasil17"></td>
+      <td id="dis"></td>
+    </tr>
+
+    <tr>
+      <th id="num" rowspan="2">6</th>
+      <td>
+        <select name="" id="bil31">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td>
+        <select name="" id="bil32">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td>
+        <select name="" id="bil33">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td id="hasil18"></td>
+      <td id="dis"></td>
+      <td id="hasil19"></td>
+    </tr>
+    <tr>
+      <td>
+        <select name="" id="bil34">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td>
+        <select name="" id="bil35">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td>
+        <select name="" id="bil36">
+          <option value="0">-</option>
+          <option value="10">10</option>
+          <option value="9">9</option>
+          <option value="8">8</option>
+          <option value="7">7</option>
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </td>
+      <td id="hasil20"></td>
+      <td id="hasil21"></td>
+      <td id="dis"></td>
+    </tr>
+
+    <tr>
+      <th colspan="6" class="jumlah">JUMLAH</th>
+      <th id="jumlah"></th>
+    </tr>
+
+        </tbody>
+      </table>
+
+      <button type="button" class="foto btn btn-primary mb-5" id="foto" onclick="printContent('body')">Cetak</button>
+  </div>
+</body>
+</html>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="issets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
