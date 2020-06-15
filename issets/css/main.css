@@ -2,6 +2,7 @@
 {
     max-width: 480px;
     width: 100%;
+    overflow-x:auto;
 }
 .logo
 {
@@ -11,6 +12,9 @@
 {
     margin-left: 2px;
     float: left;
+}
+.pengigat {
+    font-size: 12ox;
 }
 .name
 {

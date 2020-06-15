@@ -3,7 +3,7 @@ function mydate()
     document.getElementById('date').innerHTML =Date();
 }
 
-    $('.container').mousemove(function(){
+    $('.container').mouseover(function(){
         const bil1 = parseInt($('#bil1').val())
         const bil2 = parseInt($('#bil2').val())
         const bil3 = parseInt($('#bil3').val())
